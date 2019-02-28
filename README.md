@@ -4,7 +4,8 @@
 - k8s-prometheus-adapter目录：部署基于prometheus的自定义指标API服务器所需要的各资源配置清单。
 - podinfo目录：测试使用的podinfo相关的deployment和service对象的资源配置清单。
 - node_exporter目录：于kubernetes集群各节点部署node_exporter。
-- kube-state-metrics：聚合kubernetes资源对象，提供指标数据。
+- kube-state-metrics：聚合kubernetes资源对象，提供指标数据。  
+  第三方维护 https://github.com/directxman12  
 - grafana目录： 部署grafana,提供美观展示。
 - metrics-server目录： api聚合器
 
