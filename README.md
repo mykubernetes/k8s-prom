@@ -13,13 +13,13 @@
 
 安装步骤：  
 1、# git clone https://github.com/mykubernetes/k8s-prom.git  
-2、# kubectl create -f metrics-server/.  
+2、# kubectl create -f metrics-server/  
 3、# kubectl create -f namespace.yaml  
-4、# kubectl create -f node_exporter/.  
-5、# kubectl create -f prometheus/.  
-6、# kubectl create -f kube-state-metrics/.  
-7、# kubectl create -f k8s-prometheus-adapter/.  
-8、# kubectl create -f grafana/.  
+4、# kubectl create -f node_exporter/  
+5、# kubectl create -f prometheus/  
+6、# kubectl create -f kube-state-metrics/  
+7、# kubectl create -f k8s-prometheus-adapter/  
+8、# kubectl create -f grafana/  
 9、配置grafana 数据源 http://prometheus.prom.svc:9090  
 10、部署模板  
 推荐模板：  
