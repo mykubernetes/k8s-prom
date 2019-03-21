@@ -1,15 +1,15 @@
 # k8s-prom
 
-- prometheus目录：部署Promethues Metrics API Server所需要的各资源配置清单。  
+- prometheus目录：监控服务端，从node-exporter拉数据并存储为时序数据。  
   官方维护 https://github.com/kubernetes/kubernetes/tree/master/cluster/addons/prometheus  
-- k8s-prometheus-adapter目录：部署基于prometheus的自定义指标API服务器所需要的各资源配置清单。
+- k8s-prometheus-adapter目录：自定义指标,聚合apiserver,由此可支持任意Prometheus采集到的指标
 - podinfo目录：测试使用的podinfo相关的deployment和service对象的资源配置清单。
-- node_exporter目录：于kubernetes集群各节点部署node_exporter。
-- kube-state-metrics：聚合kubernetes资源对象，提供指标数据。  
+- node_exporter目录：prometheus的agent端，收集Node级别的监控数据。
+- kube-state-metrics：将prometheus中可以用PromQL查询到的指标数据转换成k8s对应的数据格式  
   https://github.com/kubernetes/kube-state-metrics  
   第三方维护 https://github.com/directxman12  
-- grafana目录： 部署grafana,提供美观展示。
-- metrics-server目录： api聚合器
+- grafana目录：展示prometheus获取到的metrics
+- metrics-server目录： 提供Node和Pod的CPU和内存使用情况
 
 安装步骤：  
 1、# git clone https://github.com/mykubernetes/k8s-prom.git  
